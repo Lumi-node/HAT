@@ -2,6 +2,8 @@
 
 **A novel index structure for AI memory systems that achieves 100% recall at 70x faster build times than HNSW.**
 
+**Also: A new database paradigm for any domain with known hierarchy + semantic similarity.**
+
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Rust](https://img.shields.io/badge/Rust-1.70+-orange.svg)](https://www.rust-lang.org/)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
@@ -273,6 +275,37 @@ python examples/demo_hat_memory.py
 - Unstructured point clouds (random embeddings)
 - Static knowledge bases (handbooks, catalogs)
 - When approximate recall is acceptable
+
+---
+
+## Beyond AI Memory: A New Database Paradigm
+
+HAT represents a fundamentally new approach to indexing: **exploiting known structure rather than learning it**.
+
+| Database Type | Structure | Semantics |
+|---------------|-----------|-----------|
+| Relational | Explicit (foreign keys) | None |
+| Document | Implicit (nesting) | None |
+| Vector (HNSW) | Learned from data | Yes |
+| **HAT** | **Explicit + exploited** | **Yes** |
+
+Traditional vector databases treat embeddings as unstructured point clouds, spending compute to *discover* topology. HAT inverts this: **known hierarchy is free information - use it.**
+
+### General Applications
+
+Any domain with **hierarchical structure + semantic similarity** benefits from HAT:
+
+- **Legal/Medical Documents:** Case → Filing → Paragraph → Sentence
+- **Code Search:** Repository → Module → Function → Line
+- **IoT/Sensor Networks:** Facility → Zone → Device → Reading
+- **E-commerce:** Catalog → Category → Product → Variant
+- **Research Corpora:** Journal → Paper → Section → Citation
+
+### The Core Insight
+
+> *"Position IS relationship. No foreign keys needed - proximity defines connection."*
+
+HAT combines the structural guarantees of document databases with the semantic power of vector search, without the computational overhead of learning topology from scratch.
 
 ---
 
