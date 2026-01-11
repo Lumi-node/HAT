@@ -11,6 +11,18 @@ documentation = "https://docs.rs/arms-hat"
 readme = "README.md"
 keywords = ["vector-database", "semantic-search", "llm", "embeddings", "hnsw"]
 categories = ["database", "science", "algorithms"]
+exclude = [
+    "target/",
+    "src/target/",
+    ".venv/",
+    ".git/",
+    ".claude/",
+    "paper/",
+    "images/",
+    "python/",
+    "benchmarks/",
+    ".env",
+]
 
 [lib]
 name = "arms_hat"
