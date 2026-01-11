@@ -2,10 +2,15 @@
 name = "arms-hat"
 version = "0.1.0"
 edition = "2021"
-authors = ["AI Research Lab"]
-description = "ARMS with Hierarchical Attention Tree - semantic memory with time awareness"
+authors = ["Automate Capture LLC <research@automate-capture.com>"]
+description = "Hierarchical Attention Tree: 100% recall at 70x faster build times than HNSW. A new database paradigm for AI memory and hierarchical semantic search."
 license = "MIT"
-repository = "https://github.com/ai-research-lab/arms"
+repository = "https://github.com/automate-capture/hat"
+homepage = "https://research.automate-capture.com/hat"
+documentation = "https://docs.rs/arms-hat"
+readme = "README.md"
+keywords = ["vector-database", "semantic-search", "llm", "embeddings", "hnsw"]
+categories = ["database", "science", "algorithms"]
 
 [lib]
 name = "arms_hat"

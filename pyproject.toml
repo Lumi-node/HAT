@@ -5,12 +5,12 @@ build-backend = "maturin"
 [project]
 name = "arms-hat"
 version = "0.1.0"
-description = "Hierarchical Attention Tree for AI memory retrieval"
+description = "Hierarchical Attention Tree: 100% recall at 70x faster build times than HNSW. A new database paradigm for AI memory and hierarchical semantic search."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.8"
 authors = [
-    { name = "AI Research Lab" }
+    { name = "Automate Capture LLC", email = "research@automate-capture.com" }
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -29,7 +29,9 @@ classifiers = [
 keywords = ["ai", "memory", "embeddings", "vector-search", "llm"]
 
 [project.urls]
-Repository = "https://github.com/ai-research-lab/arms"
+Homepage = "https://research.automate-capture.com/hat"
+Repository = "https://github.com/automate-capture/hat"
+Documentation = "https://research.automate-capture.com/hat"
 
 [project.optional-dependencies]
 dev = ["pytest", "numpy"]
