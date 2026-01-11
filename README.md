@@ -4,9 +4,11 @@
 
 **Also: A new database paradigm for any domain with known hierarchy + semantic similarity.**
 
+[![PyPI](https://img.shields.io/pypi/v/arms-hat.svg)](https://pypi.org/project/arms-hat/)
+[![crates.io](https://img.shields.io/crates/v/arms-hat.svg)](https://crates.io/crates/arms-hat)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Rust](https://img.shields.io/badge/Rust-1.70+-orange.svg)](https://www.rust-lang.org/)
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 
 ---
 
