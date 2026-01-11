@@ -304,4 +304,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 ## Links
 
 - **Research Site:** [research.automate-capture.com/hat](https://research.automate-capture.com/hat)
-- **Main Site:** [automatecapture.com](https://automatecapture.com)
+- **Main Site:** [automate-capture.com](https://automate-capture.com)
