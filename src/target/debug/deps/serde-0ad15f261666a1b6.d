@@ -1,0 +1,14 @@
+/media/lumi-node/Storage2/AI-Research-Lab/projects/ARMS/src/target/debug/deps/serde-0ad15f261666a1b6.d: /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /media/lumi-node/Storage2/AI-Research-Lab/projects/ARMS/src/target/debug/build/serde-acd5b2669130c5a6/out/private.rs
+
+/media/lumi-node/Storage2/AI-Research-Lab/projects/ARMS/src/target/debug/deps/libserde-0ad15f261666a1b6.rlib: /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /media/lumi-node/Storage2/AI-Research-Lab/projects/ARMS/src/target/debug/build/serde-acd5b2669130c5a6/out/private.rs
+
+/media/lumi-node/Storage2/AI-Research-Lab/projects/ARMS/src/target/debug/deps/libserde-0ad15f261666a1b6.rmeta: /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /media/lumi-node/Storage2/AI-Research-Lab/projects/ARMS/src/target/debug/build/serde-acd5b2669130c5a6/out/private.rs
+
+/home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/home/lumi-node/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/media/lumi-node/Storage2/AI-Research-Lab/projects/ARMS/src/target/debug/build/serde-acd5b2669130c5a6/out/private.rs:
+
+# env-dep:OUT_DIR=/media/lumi-node/Storage2/AI-Research-Lab/projects/ARMS/src/target/debug/build/serde-acd5b2669130c5a6/out

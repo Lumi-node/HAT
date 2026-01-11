@@ -1,0 +1,47 @@
+[package]
+name = "arms-hat"
+version = "0.1.0"
+edition = "2021"
+authors = ["AI Research Lab"]
+description = "ARMS with Hierarchical Attention Tree - semantic memory with time awareness"
+license = "MIT"
+repository = "https://github.com/ai-research-lab/arms"
+
+[lib]
+name = "arms_hat"
+path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]  # cdylib for Python, rlib for Rust
+
+[dependencies]
+# Core - minimal dependencies for pure logic
+thiserror = "1.0"          # Error handling
+
+# Python bindings
+pyo3 = { version = "0.22", features = ["extension-module"], optional = true }
+
+# Future adapters:
+# parking_lot = "0.12"     # Fast locks for concurrent access
+# memmap2 = "0.9"          # Memory-mapped files for NVMe
+
+[dev-dependencies]
+criterion = "0.5"          # Benchmarking
+rusqlite = { version = "0.31", features = ["bundled"] }  # Benchmark DB (bundled = no system sqlite needed)
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+hnsw = "0.11"              # HNSW implementation for comparison benchmarks
+rand = "0.8"               # Random data generation for benchmarks
+rand_distr = "0.4"         # Statistical distributions for realistic embeddings
+space = "0.17"             # Distance metrics for hnsw
+
+[features]
+default = []
+python = ["pyo3"]          # Enable Python bindings
+
+# [[bench]]
+# name = "proximity"
+# harness = false
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"

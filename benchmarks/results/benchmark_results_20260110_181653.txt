@@ -1,0 +1,179 @@
+HAT Benchmark Results
+=====================
+Date: Sat Jan 10 06:16:53 PM CST 2026
+Host: lumi-node-MS-7E32
+Rust: rustc 1.92.0 (ded5c06cf 2025-12-08)
+Quick mode: true
+
+
+=== HAT vs HNSW ===
+
+warning: unused import: `Point`
+  --> src/adapters/index/persistence.rs:51:23
+   |
+51 | use crate::core::{Id, Point};
+   |                       ^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `child_level` is never used
+   --> src/adapters/index/hat.rs:169:8
+    |
+168 | impl ContainerLevel {
+    | ------------------- method in this implementation
+169 |     fn child_level(&self) -> Option<ContainerLevel> {
+    |        ^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: field `merge` is never read
+   --> src/adapters/index/hat.rs:309:5
+    |
+289 | pub struct HatIndex {
+    |            -------- field in this struct
+...
+309 |     merge: Arc<dyn Merge>,
+    |     ^^^^^
+
+warning: methods `compute_frechet_mean` and `geodesic_interpolate` are never used
+   --> src/adapters/index/hat.rs:518:8
+    |
+327 | impl HatIndex {
+    | ------------- methods in this implementation
+...
+518 |     fn compute_frechet_mean(&self, points: &[Point], initial: &Point) -> Point {
+    |        ^^^^^^^^^^^^^^^^^^^^
+...
+722 |     fn geodesic_interpolate(&self, a: &Point, b: &Point, t: f32) -> Point {
+    |        ^^^^^^^^^^^^^^^^^^^^
+
+warning: function `id_to_bytes` is never used
+   --> src/adapters/index/persistence.rs:376:4
+    |
+376 | fn id_to_bytes(id: &Option<Id>) -> [u8; 16] {
+    |    ^^^^^^^^^^^
+
+warning: `arms-hat` (lib) generated 5 warnings (run `cargo fix --lib -p arms-hat` to apply 1 suggestion)
+warning: function `get_git_info` is never used
+   --> tests/benchmark_db.rs:101:4
+    |
+101 | fn get_git_info() -> (Option<String>, Option<String>, bool) {
+    |    ^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `create_run` is never used
+   --> tests/benchmark_db.rs:127:8
+    |
+127 | pub fn create_run(
+    |        ^^^^^^^^^^
+
+warning: function `log_hat_config` is never used
+   --> tests/benchmark_db.rs:158:8
+    |
+158 | pub fn log_hat_config(
+    |        ^^^^^^^^^^^^^^
+
+warning: function `log_metric` is never used
+   --> tests/benchmark_db.rs:177:8
+    |
+177 | pub fn log_metric(
+    |        ^^^^^^^^^^
+
+warning: function `log_comparison` is never used
+   --> tests/benchmark_db.rs:196:8
+    |
+196 | pub fn log_comparison(
+    |        ^^^^^^^^^^^^^^
+
+warning: function `add_analysis` is never used
+   --> tests/benchmark_db.rs:236:8
+    |
+236 | pub fn add_analysis(
+    |        ^^^^^^^^^^^^
+
+warning: `arms-hat` (test "phase31_hat_vs_hnsw") generated 6 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running tests/phase31_hat_vs_hnsw.rs (target/debug/deps/phase31_hat_vs_hnsw-ca1c4405f0884451)
+
+running 4 tests
+
+============================================================
+Initializing Benchmark Database
+============================================================
+
+================================================================================
+Phase 3.1: HAT vs HNSW on HIERARCHICAL Data
+================================================================================
+
+Data Configuration:
+  Sessions: 20
+  Documents/session: 5
+  Chunks/document: 10
+  Total points: 1000
+  Dimensions: 128
+
+================================================================================
+Phase 3.1: HAT vs HNSW on RANDOM Data
+================================================================================
+
+Data Configuration:
+  Points: 1000
+  Dimensions: 128
+  Structure: Random (no hierarchy)
+
+================================================================================
+Phase 3.1: HAT vs HNSW at Various Scales
+================================================================================
+
+   Scale |    HAT Build |   HNSW Build |   HAT R@10 |  HNSW R@10
+----------------------------------------------------------------------
+
+  Tables created:
+    - analysis
+    - comparisons
+    - configs
+    - metrics
+    - runs
+    - sqlite_sequence
+
+  Database path: ../../benchmarks/results.db
+
+[PASSED] Database initialized successfully
+test benchmark_db::test_init_database ... ok
+
+--- Building Indexes ---
+
+--- Building Indexes ---
+  Flat build: 1.044033ms
+  HAT build: 31.384445ms
+     500 |      15.48ms |        1.00s |     100.0% |      55.0%
+  HNSW build: 2.094521703s
+
+--- Query Benchmark ---
+
+Recall Comparison (Hierarchical Data):
+       k |        HAT |       HNSW | Δ (HAT-HNSW)
+  --------------------------------------------------
+       1 |     100.0% |      76.0% |     +24.0%
+       5 |     100.0% |      72.0% |     +28.0%
+      10 |     100.0% |      70.6% |     +29.4%
+      20 |     100.0% |      68.0% |     +32.0%
+      30 |     100.0% |      66.0% |     +34.0%
+
+Latency Comparison:
+  HAT:  1.426ms/query
+  HNSW: 0.487ms/query
+
+Build Time Comparison:
+  Flat: 1.044033ms
+  HAT:  31.384445ms
+  HNSW: 2.094521703s
+
+================================================================================
+SUMMARY: Hierarchical Data
+================================================================================
+HAT Recall@10: 100.0%
+HNSW Recall@10: 70.6%
+Advantage: HAT by 29.4%
+test test_phase31_hierarchical_data_comparison ... ok
