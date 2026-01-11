@@ -1,3 +1,18 @@
+---
+license: mit
+tags:
+  - vector-database
+  - semantic-search
+  - embeddings
+  - llm
+  - memory
+  - hnsw
+  - rust
+  - python
+library_name: arms-hat
+pipeline_tag: feature-extraction
+---
+
 # HAT: Hierarchical Attention Tree
 
 **A novel index structure for AI memory systems that achieves 100% recall at 70x faster build times than HNSW.**
