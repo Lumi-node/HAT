@@ -18,7 +18,7 @@ pipeline_tag: feature-extraction
 **A novel index structure for AI memory systems that achieves 100% recall at 70x faster build times than HNSW.**
 
 **Also: A new database paradigm for any domain with known hierarchy + semantic similarity.**
-
+[![DOI](https://zenodo.org/badge/1132306142.svg)](https://doi.org/10.5281/zenodo.18263616)
 [![PyPI](https://img.shields.io/pypi/v/arms-hat.svg)](https://pypi.org/project/arms-hat/)
 [![crates.io](https://img.shields.io/crates/v/arms-hat.svg)](https://crates.io/crates/arms-hat)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
